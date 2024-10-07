@@ -7,7 +7,7 @@ require (
 	github.com/dimfeld/httptreemux/v5 v5.4.0
 	github.com/getkin/kin-openapi v0.100.0
 	github.com/google/uuid v1.3.0
-	github.com/gorilla/websocket v1.5.0
+	github.com/gorilla/websocket v1.5.3
 	github.com/hashicorp/go-multierror v1.1.1
 	github.com/manveru/faker v0.0.0-20171103152722-9fbc68a78c4d
 	github.com/pkg/errors v0.9.1
