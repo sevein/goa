@@ -1,0 +1,25 @@
+// BuildMethodBodyUnionUserValidatePayload builds the payload for the
+// ServiceBodyUnionUserValidate MethodBodyUnionUserValidate endpoint from CLI
+// flags.
+func BuildMethodBodyUnionUserValidatePayload(serviceBodyUnionUserValidateMethodBodyUnionUserValidateBody string) (*servicebodyunionuservalidate.MethodBodyUnionUserValidatePayload, error) {
+	var err error
+	var body MethodBodyUnionUserValidateRequestBody
+	{
+		err = json.Unmarshal([]byte(serviceBodyUnionUserValidateMethodBodyUnionUserValidateBody), &body)
+		if err != nil {
+			return nil, fmt.Errorf("invalid JSON for body, \nerror: %s, \nexample of valid JSON:\n%s", err, "'{\n      \"a\": {\n         \"Values\": {\n            \"b\": \"Tempora et quae sunt itaque.\"\n         }\n      }\n   }'")
+		}
+		if body.A == nil {
+			err = goa.MergeErrors(err, goa.MissingFieldError("a", "body"))
+		}
+		if err != nil {
+			return nil, err
+		}
+	}
+	v := &servicebodyunionuservalidate.MethodBodyUnionUserValidatePayload{}
+	if body.A != nil {
+		v.A = marshalUnionUserValidateRequestBodyToServicebodyunionuservalidateUnionUserValidate(body.A)
+	}
+
+	return v, nil
+}

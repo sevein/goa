@@ -36,6 +36,7 @@ func TestClientCLIFiles(t *testing.T) {
 		{"payload-array-user-type", testdata.PayloadBodyInlineArrayUserDSL, 1, 1},
 		{"payload-map-user-type", testdata.PayloadBodyInlineMapUserDSL, 1, 1},
 		{"payload-object-type", testdata.PayloadBodyInlineObjectDSL, 1, 1},
+		{"payload-union-user-validate", testdata.PayloadBodyUnionUserValidateDSL, 1, 1},
 		{"payload-object-default-type", testdata.PayloadBodyInlineObjectDefaultDSL, 1, 1},
 		{"map-query", testdata.PayloadMapQueryPrimitiveArrayDSL, 0, 3},
 		{"map-query-object", testdata.PayloadMapQueryObjectDSL, 1, 1},
